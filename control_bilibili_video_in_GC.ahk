@@ -46,7 +46,7 @@ SendKeyToGC(Key) {
     ; Saves time when youtube is the tab it's on
     IfWinExist, bilibili
     {
-        ControlSend, Chrome_RenderWidgetHostHWND1, k , Google Chrome
+        ControlSend, Chrome_RenderWidgetHostHWND1, %Key% , Google Chrome
         return
     }
 
