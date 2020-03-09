@@ -85,7 +85,6 @@ return
 LWin & h::
 ;; 3s backward
 SendKeyToGC("j")
-ControlSend, Chrome_RenderWidgetHostHWND1, j, Google Chrome
 return
 
 ;; Win+L locks the computer
