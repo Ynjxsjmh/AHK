@@ -1,0 +1,3 @@
+
+LControl::CapsLock
+CapsLock::LControl
