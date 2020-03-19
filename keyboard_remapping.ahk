@@ -26,5 +26,9 @@ OnExitSub:
 
 SetDisableLockWorkstationRegKeyValue( value )
 {
-    RegWrite, REG_DWORD, HKEY_CURRENT_USER, Software\Microsoft\Windows\CurrentVersion\Policies\System, DisableLockWorkstation, %value%
+    ;; https://www.autohotkey.com/docs/commands/RegWrite.htm
+    ;; It has two syntaxes, the new syntax won't create the nonexisting item, so you should create it yourself and reboot.
+    ;; https://superuser.com/questions/180541/is-it-possible-to-apply-a-registry-change-without-rebooting
+    ;; Changing registry values does NOT require a reboot, they are "applied" immediately.
+    RegWrite, REG_DWORD, HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\System, DisableLockWorkstation, %value%
 } 
